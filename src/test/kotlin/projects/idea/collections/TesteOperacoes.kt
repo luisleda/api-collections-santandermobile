@@ -7,7 +7,11 @@ fun main() {
         println(salario)
     }
 
+
     println("0101010101010101010101")
+
+    println("----------------")
+
     println("Maior salario: ${salarios.max()}")
     println("Menor salario: ${salarios.min()}")
     println("Média salarios: ${salarios.average()}")
@@ -17,6 +21,7 @@ fun main() {
     }
     println("----------------")
     salariosMaiorQue2500.forEach { println(it) }
+
 
     println("0101010101010101010101")
     println(salarios.count { it in 2000.0..6000.0 })
@@ -28,4 +33,5 @@ fun main() {
     println("0101010101010101010101")
     println(salarios.any {it == 1000.0})
     println(salarios.any {it == 500.0})
+
 }
