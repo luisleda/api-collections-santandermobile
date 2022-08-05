@@ -12,4 +12,11 @@ fun main() {
     repositorio.create(SECTI.nome, SECTI)
 
     println(repositorio.findById(EGMA.nome))
+
+    println("100110011010101010101")
+    repositorio.findAll().forEach { println(it) }
+
+    println("100110011010101010101")
+    repositorio.remove(EGMA.nome)
+    repositorio.findAll().forEach { println(it) }
 }
