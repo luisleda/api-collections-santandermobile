@@ -12,6 +12,11 @@ fun main() {
 
     println(empresas.find { it.nome == "SEATI" })
 
+    println("0101010101010101")
+    empresas
+        .sortedBy { it.cnpj }
+        .forEach { println(it) }
+
 }
 
 data class Empresa(
