@@ -1,9 +1,9 @@
 package projects.idea.collections
 
 fun main() {
-    val EGMA = Empresa("EGMA", "11.308.791/0001-38")
-    val SEATI = Empresa("SEATI", "05.022.633/0001-14")
-    val SECTI = Empresa("SECTI", "05.572.043/0001-65")
+    val EGMA = Empresa("EGMA", "11.308.791/0001-38", "especialização")
+    val SEATI = Empresa("SEATI", "05.022.633/0001-14","tecnologia")
+    val SECTI = Empresa("SECTI", "05.572.043/0001-65", "tecnologia")
 
     val empresas = listOf(EGMA, SEATI, SECTI)
 
@@ -14,14 +14,15 @@ fun main() {
 
     println("0101010101010101")
     empresas
-        .sortedBy { it.cnpj }
+        .groupBy { it.ramo }
         .forEach { println(it) }
 
 }
 
 data class Empresa(
     val nome: String,
-    val cnpj: String
+    val cnpj: String,
+    val ramo: String
 ) {
     override fun toString(): String =
         """
